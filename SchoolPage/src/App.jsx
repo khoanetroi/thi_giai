@@ -1,7 +1,8 @@
-import './App.css'
-import DefaultLayout from './Pages/DefaultLayout'
 
+import './App.css'
+import DefaultLayout   from "./Pages/DefaultLayout";
 function App() {
+
 
   return (
     <>
