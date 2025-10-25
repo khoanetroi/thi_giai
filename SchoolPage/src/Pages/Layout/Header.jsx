@@ -5,7 +5,6 @@ const NavbarPTIT = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDaoTaoOpen, setIsDaoTaoOpen] = useState(false);
 
-    // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (!event.target.closest('#dropdownDaoTao') && !event.target.closest('#dropdownDaoTaoButton')) {
@@ -24,12 +23,10 @@ const NavbarPTIT = () => {
             <nav className="relative bg-white/90 backdrop-blur-lg border border-gray-100 rounded-lg md:rounded-full shadow-lg max-w-screen-xl mx-auto">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 md:p-3">
 
-                    {/* Logo */}
                     <a href="#" className="flex items-center space-x-2 rtl:space-x-reverse pl-1">
                         <img src={logo} className="h-8 md:h-10" alt="PTIT Logo" />
                     </a>
 
-                    {/* Mobile buttons */}
                     <div className="flex items-center md:order-2 space-x-1 rtl:space-x-reverse pr-1 md:pr-2">
                         <a href="#" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-md text-sm px-3 py-1.5 text-center transition-all duration-300 md:hidden transform hover:scale-105">
                             Xét tuyển
@@ -48,7 +45,6 @@ const NavbarPTIT = () => {
                         </button>
                     </div>
 
-                    {/* Navigation menu */}
                     <div
                         id="navbar-mega-menu"
                         className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto md:order-1`}
@@ -67,7 +63,6 @@ const NavbarPTIT = () => {
                                 </a>
                             </li>
 
-                            {/* Đào tạo dropdown */}
                             <li className="relative">
                                 <button
                                     id="dropdownDaoTaoButton"
@@ -81,7 +76,6 @@ const NavbarPTIT = () => {
                                     </svg>
                                 </button>
 
-                                {/* Dropdown menu */}
                                 <div
                                     id="dropdownDaoTao"
                                     className={`${isDaoTaoOpen ? 'block' : 'hidden'} absolute z-10 font-normal bg-white/90 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg w-auto md:w-[400px] mt-2 border border-gray-100`}
@@ -134,7 +128,7 @@ const NavbarPTIT = () => {
                         </ul>
                     </div>
 
-                    {/* Desktop apply button */}
+
                     <div className="hidden md:flex items-center md:order-2">
                         <a href="#" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-full text-sm px-5 py-2.5 transition-all duration-300 transform hover:scale-105">
                             Xét tuyển
