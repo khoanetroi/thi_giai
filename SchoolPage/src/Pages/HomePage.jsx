@@ -16,6 +16,15 @@ import eventImg2 from "../assets/HoatDongIMG/hinh5.jpg";
 import eventImg3 from "../assets/HoatDongIMG/hinh6.jpg";
 import tip_1 from "../assets/HomePageAssets/tip_1.jpg"
 import tip_2 from "../assets/HomePageAssets/tip_2.jpg"
+import a1 from "../assets/HomePageAssets/a1.jpg"
+import a2 from "../assets/HomePageAssets/a2.jpg"
+import a3 from "../assets/HomePageAssets/a3.jpg"
+import a4 from "../assets/HomePageAssets/a4.jpg"
+import a5 from "../assets/HomePageAssets/a5.jpg"
+import a6 from "../assets/HomePageAssets/a6.jpg"
+import a7 from "../assets/HomePageAssets/a7.jpg"
+import a8 from "../assets/HomePageAssets/a8.jpg"
+import a9 from "../assets/HomePageAssets/a9.jpg"
 
 function HomePage() {
     useEffect(() => {
@@ -327,8 +336,9 @@ function HomePage() {
 
             </div>
             
+            {/* tip */}
             <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 my-15 gapy-10 gap-y-10">
-                <div className="col-span-1 md:col-span-7 bg-red-700 p-5 rounded-2xl flex justify-center items-center">
+                <div className="col-span-1 md:col-span-7 bg-red-700 p-5 rounded-2xl flex justify-center items-center duration-500 hover:bg-red-900 ">
                     <div className="p-5">
                         <h3 className="md:text-2xl font-extrabold text-white mb-3 text-left">
                         Cẩm nang dành cho Phụ huynh và Gia đình sinh viên PTITHCM
@@ -349,7 +359,7 @@ function HomePage() {
                 <div className="hidden md:block md:col-span-5 p-5">
                     <img src={tip_2} className="rounded-2xl"/>
                 </div>
-                <div className="col-span-1 md:col-span-7 bg-blue-950 p-5 rounded-2xl flex justify-center items-center">
+                <div className="col-span-1 md:col-span-7 bg-blue-950 p-5 rounded-2xl flex justify-center items-center duration-500 hover:bg-violet-950 ">
                     <div className="p-5">
                         <h3 className="md:text-2xl font-extrabold text-white mb-3 text-left">
                         Đăng ký nhận bản tin và thông tin sự kiện
@@ -365,7 +375,7 @@ function HomePage() {
                     </div>
                 </div>
 
-            </div>
+            </div>                
        </>
     );
 }
