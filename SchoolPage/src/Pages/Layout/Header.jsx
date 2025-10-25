@@ -99,7 +99,7 @@ const NavbarPTIT = () => {
                                         <ul className="space-y-2 mt-2 md:mt-0" aria-labelledby="dropdownDaoTaoButton">
                                             <li>
                                                 <NavLink to="/student" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
-                                                    <div className="font-semibold">Bản điểm</div>
+                                                    <div className="font-semibold">Bảng điểm</div>
                                                 </NavLink>
                                             </li>
                                             <li>
