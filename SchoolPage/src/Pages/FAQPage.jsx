@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ChatBox, { exampleChatData } from '../Components/ChatBox';
 
 const FAQForm = () => {
     const [Data, setData] = useState({
@@ -10,6 +11,7 @@ const FAQForm = () => {
     const [files, setFiles] = useState([]);
     const [submitForms, setSubmitForms] = useState([]);
     const [editIndex, setEditIndex] = useState(null);
+    const [isChatOpen, setIsChatOpen] = useState(false);
 
     const majors = [
         'Công nghệ Thông tin',
@@ -101,12 +103,11 @@ const FAQForm = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
-
-
     const isFormValid = Data.major && Data.issueType && Data.title && Data.content;
 
     return (
         <div className="max-w-6xl mx-auto p-6">
+
             {/* Form hỏi đáp */}
             <div className="bg-white rounded-lg shadow-lg overflow-hidden mb-8">
                 <div className="bg-red-600 py-4 px-6">
@@ -269,6 +270,31 @@ const FAQForm = () => {
                         </div>
                     </form>
                 </div>
+            </div>
+
+            <div className="fixed bottom-6 right-6 flex flex-col items-end gap-4 z-50">
+                {isChatOpen && (
+                    <ChatBox
+                        messages={exampleChatData}
+                        onClose={() => setIsChatOpen(false)}
+                    />
+                )}
+                <button
+                    type="button"
+                    onClick={() => setIsChatOpen(prev => !prev)}
+                    className="w-14 h-14 md:w-16 md:h-16 bg-red-600 text-white rounded-full shadow-lg hover:bg-red-700 focus:outline-none focus:ring-4 focus:ring-red-200 transition-transform transform hover:scale-105 flex items-center justify-center"
+                    aria-label={isChatOpen ? 'Đóng cửa sổ chat' : 'Mở cửa sổ chat'}
+                >
+                    {isChatOpen ? (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    ) : (
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2 11H5a2 2 0 01-2-2V7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2z" />
+                        </svg>
+                    )}
+                </button>
             </div>
 
             {submitForms.length > 0 && (
