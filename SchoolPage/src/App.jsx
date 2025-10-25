@@ -15,13 +15,8 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
-          <Route path="hoat-dong" element={<HoatDong />} />
-          <Route path="student" element={<StudentStatus />} />
-          <Route path="faq" element={<FAQPage />} />
-          <Route path="information-full" element={<InformationFull />} />
-          <Route path="Shedule" element={<Schedule />} />
-          <Route path="Exam" element={<LichThi />} />
         </Route>
+        
       </Routes>
     </BrowserRouter>
   )
