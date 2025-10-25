@@ -1,4 +1,3 @@
-
 function Footer() {
     return (
         <footer className="bg-red-700/90 backdrop-blur-lg border-t border-white/20 text-white shadow-inner-top mt-16 overflow-hidden rounded-t-xl md:rounded-t-2xl mx-2">
@@ -8,9 +7,9 @@ function Footer() {
                     {/* Thông tin liên hệ */}
                     <div className="space-y-4 sm:col-span-2 md:col-span-2">
                         <a href="#" className="block transition-opacity duration-300 hover:opacity-80">
-              <span className="self-center text-lg sm:text-xl font-bold uppercase block max-w-[200px] sm:max-w-none">
-                Học viện Công nghệ Bưu chính Viễn thông
-              </span>
+							<span className="self-center text-lg sm:text-xl font-bold uppercase block max-w-[200px] sm:max-w-none">
+								Học viện Công nghệ Bưu chính Viễn thông
+							</span>
                         </a>
 
                         <ul className="space-y-2 text-sm text-gray-200">
@@ -31,7 +30,7 @@ function Footer() {
                                 </div>
                                 <span>Điện thoại: (024) 3352 8122</span>
                             </li>
-                            <li className="flex items-start p-1.5 rounded-lg transition-colors duration-300 hover:bg-white/5">
+							<li className="flex items-start p-1.5 rounded-lg transition-colors duration-300 hover:bg-white/5">
                                 <div className="flex-shrink-0 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center mr-3 mt-0.5 md:w-10 md:h-10">
                                     <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -75,7 +74,7 @@ function Footer() {
                         <div className="flex space-x-3">
                             <a href="#" className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center text-white transition-all duration-300 hover:bg-white/20 hover:scale-110 md:w-10 md:h-10">
                                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                                    <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+									<path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
                                 </svg>
                                 <span className="sr-only">Facebook</span>
                             </a>
