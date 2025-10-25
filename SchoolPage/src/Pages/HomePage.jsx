@@ -4,10 +4,18 @@ import slide3 from "../assets/HomePageAssets/slide3.jpg"
 import slide4 from "../assets/HomePageAssets/slide4.jpg"
 import slide5 from "../assets/HomePageAssets/slide5.jpg"
 import logo from "../assets/HomePageAssets/logo.webp"
-import bg_info from "../assets/HomePageAssets/bg_info.jpg"
 import bg_contact from "../assets/HomePageAssets/bg_contact.jpg"
 import { initFlowbite } from 'flowbite';
 import { useEffect } from "react";
+import Card from "../Components/Card";
+import scholarshipImg1 from "../assets/HoatDongIMG/hinh1.jpg";
+import scholarshipImg2 from "../assets/HoatDongIMG/hinh2.jpg";
+import scholarshipImg3 from "../assets/HoatDongIMG/hinh3.jpg";
+import eventImg1 from "../assets/HoatDongIMG/hinh4.jpg";
+import eventImg2 from "../assets/HoatDongIMG/hinh5.jpg";
+import eventImg3 from "../assets/HoatDongIMG/hinh6.jpg";
+import tip_1 from "../assets/HomePageAssets/tip_1.jpg"
+import tip_2 from "../assets/HomePageAssets/tip_2.jpg"
 
 function HomePage() {
     useEffect(() => {
@@ -191,7 +199,7 @@ function HomePage() {
             </div>
 
             {/* Info về trường */}
-            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto mt-[50px] p-5 gap-2">
+            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto my-10 p-5 gap-2">
                 <div className="mx-auto my-auto hidden md:block md:col-span-1">
 
                     <figure class="relative max-w-sm transition-all duration-500 cursor-pointer filter grayscale hover:grayscale-0">
@@ -214,20 +222,150 @@ function HomePage() {
                 
             </div>
 
-
+            {/* Info contact */}
             <div
-                className="relative w-full h-120 bg-cover bg-center flex items-center justify-start p-8 my-5 overflow-hidden " 
+                className="relative w-full h-120 bg-cover bg-center  p-8 my-[30px] overflow-hidden  flex  flex-col justify-center  items-end" 
                 style={{ 
                     backgroundImage: `url(${bg_contact})` 
                 }}
             >
-                <div className="absolute inset-0 bg-linear-to-r from-white/10 to-white/100"></div>
+
                 
-                <h1 className="text-gray-900 text-4xl font-bold z-10">
-                    hello
-                </h1>
+                <div className="absolute inset-0 bg-linear-to-r from-white/10 to-white/100"></div>
+
+               
+                <div className="w-full md:w-1/2 lg:w-2/5 p-6 z-10 space-y-4 bg-white border border-red-600 md:bg-transparent md:border-none hover:shadow-2xl duration-500">
+                    {/* TIÊU ĐỀ CHÍNH */}
+                    <h2 className="text-3xl font-extrabold text-red-600 mb-4 border-b pb-2">
+                        THÔNG TIN LIÊN HỆ
+                    </h2>
+
+                    {/* MỤC 1: ĐỊA CHỈ */}
+                    <div className="space-y-1">
+                        <h3 className="text-lg font-bold text-[#051a53]">
+                            1. ĐỊA CHỈ TẠI TP. HỒ CHÍ MINH
+                        </h3>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">Trụ sở chính:</strong> 11 Nguyễn Đình Chiểu, phường Sài Gòn
+                        </p>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">Cơ sở đào tạo:</strong> 97 Man Thiện, phường Tăng Nhơn Phú
+                        </p>
+                    </div>
+
+                     {/* MỤC 2: ĐỊA CHỈ */}
+                    <div className="space-y-1">
+                        <h3 className="text-lg font-bold text-[#051a53]">
+                            2. Thông tin liên hệ nhà trường
+                        </h3>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">Email liên hệ:</strong> hvbcvthcm@ptithcm.edu.vn
+                        </p>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">SĐT:</strong> (028) 38.295.258
+                        </p>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">SĐT:</strong>  (028) 39.105.510
+                        </p>
+                    </div>
+                </div>
+                
+                
+                
             </div>
 
+            {/* Tin tức hoạt động sinh viên */}
+            <div className="container mx-auto my-15 p-5">
+                <h2 className="text-3xl font-extrabold text-red-600 mb-5 border-b pb-2 ">
+                    Hoạt động - tin tức
+                </h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-9">
+                    <Card
+                        imageSrc={scholarshipImg1}
+                        category="Tin tức"
+                        date="24/10/2025"
+                        title="PTIT tổ chức Lễ tốt nghiệp cho gần 800 Thạc sỹ, Cử nhân"
+                        description="Cùng nhìn lại những khoảnh khắc ấn tượng trong buổi lễ tốt nghiệp năm 2025 đợt 1."
+                    />
+                    <Card
+                        imageSrc={scholarshipImg2}
+                        category="Tin tức"
+                        date="20/10/2025"
+                        title="Câu lạc bộ học thuật ra mắt chuỗi hội thảo công nghệ"
+                        description="Sinh viên được cập nhật xu hướng AI, Cloud và An toàn thông tin qua các phiên chuyên đề."
+                    />
+                    <Card
+                        imageSrc={scholarshipImg3}
+                        category="Sự kiện"
+                        date="15/10/2025"
+                        title="Tuần lễ định hướng tân sinh viên 2025"
+                        description="Các hoạt động giao lưu, hướng nghiệp và hỗ trợ học bổng dành cho sinh viên khóa mới."
+                    />
+                    <Card
+                        imageSrc={eventImg1}
+                        category="Sự kiện"
+                        date="24/10/2025"
+                        title="PTIT tổ chức Lễ tốt nghiệp cho gần 800 Thạc sỹ, Cử nhân"
+                        description="Cùng nhìn lại những khoảnh khắc ấn tượng trong buổi lễ tốt nghiệp năm 2025 đợt 1."
+                    />
+                    <Card
+                        imageSrc={eventImg2}
+                        category="Sự kiện"
+                        date="20/10/2025"
+                        title="Câu lạc bộ học thuật ra mắt chuỗi hội thảo công nghệ"
+                        description="Sinh viên được cập nhật xu hướng AI, Cloud và An toàn thông tin qua các phiên chuyên đề."
+                    />
+                    <Card
+                        imageSrc={eventImg3}
+                        category="Sự kiện"
+                        date="15/10/2025"
+                        title="Tuần lễ định hướng tân sinh viên 2025"
+                        description="Các hoạt động giao lưu, hướng nghiệp và hỗ trợ học bổng dành cho sinh viên khóa mới."
+                    />
+                </div>
+
+            </div>
+            
+            <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 my-15 gapy-10 gap-y-10">
+                <div className="col-span-1 md:col-span-7 bg-red-700 p-5 rounded-2xl flex justify-center items-center">
+                    <div className="p-5">
+                        <h3 className="md:text-2xl font-extrabold text-white mb-3 text-left">
+                        Cẩm nang dành cho Phụ huynh và Gia đình sinh viên PTITHCM
+                        </h3>
+                        
+                        <p className="text-gray-200 text-lg mb-6 text-justify">
+                            Nắm bắt nhanh chóng các thông tin, chương trình, và dịch vụ hỗ trợ sinh viên bên cạnh những tài nguyên hữu ích dành cho phụ huynh.
+                        </p>
+                        
+                        <a href="#" className="inline-flex items-center px-6 py-3 text-sm font-medium text-white hover: bg-blue-950 rounded-lg shadow-md hover:bg-blue-500 transition duration-300">
+                            Nhận ngay
+                        </a>
+                    </div>
+                </div>
+                <div className="hidden md:block md:col-span-5 p-5 ">
+                    <img src={tip_1} className="rounded-2xl"/>
+                </div>
+                <div className="hidden md:block md:col-span-5 p-5">
+                    <img src={tip_2} className="rounded-2xl"/>
+                </div>
+                <div className="col-span-1 md:col-span-7 bg-blue-950 p-5 rounded-2xl flex justify-center items-center">
+                    <div className="p-5">
+                        <h3 className="md:text-2xl font-extrabold text-white mb-3 text-left">
+                        Đăng ký nhận bản tin và thông tin sự kiện
+                        </h3>
+                        
+                        <p className="text-gray-200 text-lg mb-6 text-justify">
+                            Cập nhật tin tức nổi bật tại PTIT và thông tin, sự kiện dành cho phụ huynh và gia đình sinh viên. 
+                        </p>
+                        
+                        <a href="#" className="inline-flex items-center px-6 py-3 text-sm font-medium  text-white hover: bg-red-700 rounded-lg shadow-md hover:bg-red-400 transition duration-300">
+                            Đăng ký ngay
+                        </a>
+                    </div>
+                </div>
+
+            </div>
        </>
     );
 }
