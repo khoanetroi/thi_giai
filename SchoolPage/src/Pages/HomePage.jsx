@@ -193,7 +193,7 @@ function HomePage() {
             </div>
 
             {/* Info về trường */}
-            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto mt-[50px] p-5 gap-2">
+            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto my-[50px] p-5 gap-2">
                 <div className="mx-auto my-auto hidden md:block md:col-span-1">
 
                     <figure class="relative max-w-sm transition-all duration-500 cursor-pointer filter grayscale hover:grayscale-0">
@@ -218,16 +218,38 @@ function HomePage() {
 
 
             <div
-                className="relative w-full h-120 bg-cover bg-center flex items-center justify-start p-8 my-5 overflow-hidden " 
+                className="relative w-full h-120 bg-cover bg-center  p-8 my-[30px] overflow-hidden  flex  flex-col justify-center  items-end" 
                 style={{ 
                     backgroundImage: `url(${bg_contact})` 
                 }}
             >
-                <div className="absolute inset-0 bg-linear-to-r from-white/10 to-white/100"></div>
+
                 
-                <h1 className="text-gray-900 text-4xl font-bold z-10">
-                    hello
-                </h1>
+                <div className="absolute inset-0 bg-linear-to-r from-white/10 to-white/100"></div>
+
+               
+                <div className="w-full md:w-1/2 lg:w-2/5 p-6 z-10 space-y-4">
+                    {/* TIÊU ĐỀ CHÍNH */}
+                    <h2 className="text-3xl font-extrabold text-red-600 mb-4 border-b pb-2">
+                        THÔNG TIN LIÊN HỆ
+                    </h2>
+
+                    {/* MỤC 1: ĐỊA CHỈ */}
+                    <div className="space-y-1">
+                        <h3 className="text-lg font-bold text-[#051a53]">
+                            1. ĐỊA CHỈ TẠI TP. HỒ CHÍ MINH
+                        </h3>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">Trụ sở chính:</strong> 11 Nguyễn Đình Chiểu, phường Sài Gòn
+                        </p>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">Cơ sở đào tạo:</strong> 97 Man Thiện, phường Tăng Nhơn Phú
+                        </p>
+                    </div>
+                </div>
+                
+                
+                
             </div>
 
        </>
