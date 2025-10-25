@@ -6,6 +6,8 @@ import slide3 from "../assets/HomePageAssets/slide3.jpg"
 import slide4 from "../assets/HomePageAssets/slide4.jpg"
 import slide5 from "../assets/HomePageAssets/slide5.jpg"
 import logo from "../assets/HomePageAssets/logo.webp"
+import bg_info from "../assets/HomePageAssets/bg_info.jpg"
+import bg_contact from "../assets/HomePageAssets/bg_contact.jpg"
 import { initFlowbite } from 'flowbite';
 import { useEffect } from "react";
 
@@ -191,7 +193,7 @@ function HomePage() {
             </div>
 
             {/* Info về trường */}
-            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto mt-[50px] p-5 gap-2 ">
+            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto mt-[50px] p-5 gap-2">
                 <div className="mx-auto my-auto hidden md:block md:col-span-1">
 
                     <figure class="relative max-w-sm transition-all duration-500 cursor-pointer filter grayscale hover:grayscale-0">
@@ -214,9 +216,18 @@ function HomePage() {
                 
             </div>
 
-            
-            <div className="">
 
+            <div
+                className="relative w-full h-120 bg-cover bg-center flex items-center justify-start p-8 my-5 overflow-hidden " 
+                style={{ 
+                    backgroundImage: `url(${bg_contact})` 
+                }}
+            >
+                <div className="absolute inset-0 bg-linear-to-r from-white/10 to-white/100"></div>
+                
+                <h1 className="text-gray-900 text-4xl font-bold z-10">
+                    hello
+                </h1>
             </div>
 
        </>
