@@ -67,27 +67,27 @@ const NavbarPTIT = () => {
 
                             <li className="relative">
                                 <button
-                                    id="dropdownDaoTaoButton"
+                                    id="dropdownSinhVienButton"
                                     onClick={() => setIsDaoTaoOpen(!isDaoTaoOpen)}
                                     onMouseEnter={() => setIsDaoTaoOpen(true)}
                                     className="flex items-center justify-between w-full py-2 px-3 text-gray-700 rounded-md hover:bg-gray-100 hover:text-red-500 md:rounded-full md:px-4 transition-colors duration-200 md:w-auto"
                                 >
-                                    Đào tạo
+                                    Thông tin sinh viên
                                     <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                                     </svg>
                                 </button>
 
                                 <div
-                                    id="dropdownDaoTao"
+                                    id="dropdownSinhVien"
                                     className={`${isDaoTaoOpen ? 'block' : 'hidden'} absolute z-10 font-normal bg-white/90 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg w-auto md:w-[400px] mt-2 border border-gray-100`}
-                                    onMouseLeave={() => setIsDaoTaoOpen(false)}
+                                    onMouseLeave={() => setIsSinhVienOpen(false)}
                                 >
                                     <div className="grid grid-cols-1 md:grid-cols-2 p-4 text-sm text-gray-700">
                                         <ul className="space-y-2" aria-labelledby="dropdownDaoTaoButton">
                                             <li>
                                                 <NavLink to="/Shedule" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
-                                                    <div className="font-semibold">Đại học chính quy</div>
+                                                    <div className="font-semibold">Thông tin sinh viên</div>
                                                     <div className="text-xs text-gray-500">Chương trình đào tạo kỹ sư, cử nhân</div>
                                                 </NavLink>
                                             </li>
