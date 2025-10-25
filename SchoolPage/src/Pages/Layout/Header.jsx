@@ -126,7 +126,7 @@ const NavbarPTIT = () => {
                             </li>
 
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-700 rounded-md hover:bg-gray-100 hover:text-red-500 md:rounded-full md:px-4 transition-colors duration-200">
+                                <a href = "#" className="block py-2 px-3 text-gray-700 rounded-md hover:bg-gray-100 hover:text-red-500 md:rounded-full md:px-4 transition-colors duration-200">
                                     Liên hệ
                                 </a>
                             </li>

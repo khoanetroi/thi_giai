@@ -1,8 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
-const InfoBody = () => {
+const aboutUs = () => {
   // Sample data for Section 1
   const allArticles = [
+    {
+      date: "25/10/2025",
+      tag: "Công nghệ đa phương tiện",
+      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
+      title: "Khám phá công nghệ mới nhất",
+      content: "Cập nhật những xu hướng công nghệ đa phương tiện đang thịnh hành hiện nay..."
+    },
+    {
+      date: "25/10/2025",
+      tag: "Công nghệ đa phương tiện",
+      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
+      title: "Khám phá công nghệ mới nhất",
+      content: "Cập nhật những xu hướng công nghệ đa phương tiện đang thịnh hành hiện nay..."
+    },
     {
       date: "25/10/2025",
       tag: "Công nghệ đa phương tiện",
@@ -64,40 +78,53 @@ const InfoBody = () => {
   // Sample data for Section 2
   const simpleArticles = [
     {
-      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
-      tag: "Thông báo",
-      title: "Lịch thi giữa kỳ học kỳ I năm học 2024-2025",
-      content: "Thông báo lịch thi giữa kỳ cho các khóa học kỳ I. Sinh viên lưu ý thời gian và địa điểm thi..."
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Công nghệ thông tin",
+      title: "Nguyễn Hồng Sơn",
+      content: "Giảng viên ngành Công nghệ thông tin..."
     },
     {
-      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
-      tag: "Học bổng",
-      title: "Thông báo học bổng khuyến khích học tập",
-      content: "Danh sách sinh viên đạt học bổng khuyến khích học tập năm học 2024-2025..."
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Công nghệ đa phương tiện",
+      title: "Nguyễn Tất Mão",
+      content: "Giảng viên ngành Công nghệ đa phương tiện..."
     },
     {
-      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
-      tag: "Tuyển dụng",
-      title: "Cơ hội việc làm tại các doanh nghiệp công nghệ",
-      content: "Nhiều cơ hội việc làm hấp dẫn dành cho sinh viên và cựu sinh viên PTIT..."
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Truyền thông đa phương tiện",
+      title: "Nguyễn Công Khanh",
+      content: "Giảng viên ngành Truyền thông đa phương tiện..."
     },
     {
-      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
-      tag: "Sự kiện",
-      title: "Hội thảo công nghệ 4.0 và tương lai nghề nghiệp",
-      content: "Tham gia hội thảo để tìm hiểu về xu hướng công nghệ và định hướng nghề nghiệp..."
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "An toàn thông tin",
+      title: "Phan Văn X",
+      content: "Giảng viên ngành An toàn thông tin..."
+    },
+    
+    {
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Công nghệ đa phương tiện",
+      title: "Lê Minh Hóa",
+      content: "Giảng viên ngành Công nghệ đa phương tiện..."
     },
     {
-      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
-      tag: "Đăng ký",
-      title: "Mở đăng ký học phần học kỳ II",
-      content: "Sinh viên tiến hành đăng ký học phần cho học kỳ II theo hướng dẫn..."
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Công nghệ đa phương tiện",
+      title: "Nguyễn Văn Sáu",
+      content: "Giảng viên ngành Công nghệ đa phương tiện..."
     },
     {
-      image: "https://fit.ptithcm.edu.vn/wp-content/uploads/2024/05/thong-bao-tuyen-sinh-dai-hoc-chinh-quy-2024.webp",
-      tag: "Thông báo",
-      title: "Lịch nghỉ Tết Nguyên Đán 2025",
-      content: "Thông báo lịch nghỉ Tết Nguyên Đán và thời gian quay lại học tập..."
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Công nghệ đa phương tiện",
+      title: "Huỳnh Thị Tuyết Trinh",
+      content: "Giảng viên ngành Công nghệ đa phương tiện..."
+    },
+    {
+      image: "https://png.pngtree.com/element_our/20200610/ourmid/pngtree-character-default-avatar-image_2237203.jpg",
+      tag: "Công nghệ đa phương tiện",
+      title: "Trương Thị Quyên",
+      content: "Giảng viên ngành Công nghệ đa phương tiện..."
     }
   ];
 
@@ -140,7 +167,7 @@ const InfoBody = () => {
   const [filterTag, setFilterTag] = useState('');
   const [filteredArticles, setFilteredArticles] = useState(allArticles);
   const [isHovering, setIsHovering] = useState(false);
-  const itemsPerPage = 8;
+  const itemsPerPage = 6;
 
   const totalPages = Math.ceil(filteredArticles.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -181,12 +208,17 @@ const InfoBody = () => {
           onMouseEnter={() => setIsHovering(true)}
           onMouseLeave={() => setIsHovering(false)}
         >
-          {/* Previous Button - Fixed on Left */}
+          <div className="bg-white rounded-2xl shadow-lg p-6">
+          
+          {/* Previous Button - Absolute positioned within section */}
           <button
             onClick={handlePrevPage}
             disabled={currentPage === 1}
-            className={`fixed left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm text-gray-700 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${
-              isHovering && currentPage > 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            className={`absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm text-gray-700 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition-all duration-300 ${
+            
+              (isHovering && currentPage > 1) 
+                ? 'opacity-100 pointer-events-auto' 
+                : 'opacity-0 pointer-events-none'
             }`}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -194,20 +226,20 @@ const InfoBody = () => {
             </svg>
           </button>
 
-          {/* Next Button - Fixed on Right */}
+          {/* Next Button - Absolute positioned within section */}
           <button
             onClick={handleNextPage}
-            disabled={currentPage === totalPages}
-            className={`fixed right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm text-gray-700 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${
-              isHovering && currentPage < totalPages ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            disabled={currentPage === totalPages} // Thường disable khi ở trang cuối
+            className={`absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-sm text-gray-700 p-4 rounded-full shadow-lg hover:bg-red-600 hover:text-white transition-all duration-300 ${
+              (isHovering && currentPage < totalPages) 
+                ? 'opacity-100 pointer-events-auto' 
+                : 'opacity-0 pointer-events-none'
             }`}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"/>
             </svg>
           </button>
-
-          <div className="bg-white rounded-2xl shadow-lg p-6">
             {/* Search Section - Single Row */}
             <div className="mb-8">
               <h1 className="text-3xl font-bold text-gray-800 mb-6">Tin Tức & Sự Kiện</h1>
@@ -241,7 +273,7 @@ const InfoBody = () => {
             </div>
 
             {/* Grid Cards Section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
               {currentArticles.map((article, index) => (
                 <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 cursor-pointer transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
                   <img src={article.image} alt={article.title} className="w-full h-48 object-cover" />
@@ -260,7 +292,7 @@ const InfoBody = () => {
             {/* Page Indicator */}
             <div className="flex justify-center pt-6 border-t border-gray-200">
               <span className="text-gray-600 font-medium">
-                Trang <span className="font-bold text-red-600">{currentPage}</span> / {totalPages}
+                <span className="font-bold text-red-600">{currentPage}</span> / {totalPages}
               </span>
             </div>
           </div>
@@ -283,26 +315,28 @@ const InfoBody = () => {
           </div>
         </div>
 
-        {/* Section 3: List Cards with Images */}
-        <div className="bg-white rounded-2xl shadow-lg p-6">
-          <h2 className="text-2xl font-bold text-gray-800 mb-6">Cơ sở vật chất</h2>
-          <div className="space-y-4">
-            {listArticles.map((article, index) => (
-              <div key={index} className="flex gap-4 bg-gray-50 rounded-xl p-4 border border-gray-200 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-                <img src={article.image} alt={article.title} className="w-32 h-24 object-cover rounded-lg flex-shrink-0" />
-                <div className="flex-1 min-w-0">
-                  <span className="inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-medium mb-2">{article.tag}</span>
-                  <h3 className="text-lg font-bold text-gray-800 mb-2 line-clamp-1">{article.title}</h3>
-                  <p className="text-sm text-gray-600 line-clamp-2">{article.content}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+{/* Section 3: List Cards with Images */}
+<div className="bg-white rounded-2xl shadow-lg p-6">
+  <h2 className="text-2xl font-bold text-gray-800 mb-6">Cơ sở vật chất</h2>
+  <div className="space-y-4">
+    {listArticles.map((article, index) => (
+      <div key={index} className="flex flex-col sm:flex-row gap-4 bg-gray-50 rounded-xl p-4 border border-gray-200 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg relative">
+        <img src={article.image} alt={article.title} className="w-full sm:w-32 h-48 sm:h-24 object-cover rounded-lg flex-shrink-0" />
+        <div className="flex-1 min-w-0 pr-0 sm:pr-24">
+          <h3 className="text-xl font-bold text-gray-800 line-clamp-1 mb-2">{article.title}</h3>
+          <p className="text-sm text-gray-600 line-clamp-2">{article.content}</p>
         </div>
+        <span className="sm:absolute top-4 right-4 inline-block px-3 py-1 bg-green-100 text-green-600 rounded-full text-xs font-medium self-start">
+          {article.tag}
+        </span>
+      </div>
+    ))}
+  </div>
+</div>
 
       </div>
     </div>
   );
 };
 
-export default InfoBody;
+export default aboutUs;
