@@ -1,12 +1,12 @@
 
 import './App.css'
-import DefaultLayout   from "./Pages/DefaultLayout";
+import DefaultLayout from "./Pages/DefaultLayout";
 function App() {
 
 
   return (
     <>
-      <DefaultLayout />
+        <DefaultLayout />
     </>
   )
 }
