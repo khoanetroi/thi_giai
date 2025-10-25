@@ -8,6 +8,7 @@ import FAQPage from "./Pages/FAQPage"
 import InformationFull from "./Pages/InformationFull"
 import Schedule from "./Pages/Shedule.jsx";
 import LichThi from "./Pages/LichThi.jsx";
+import About from "./Pages/Layout/about";
 
 function App() {
   return (
@@ -15,8 +16,14 @@ function App() {
       <Routes>
         <Route path="/" element={<DefaultLayout />}>
           <Route index element={<HomePage />} />
+          <Route path="hoat-dong" element={<HoatDong />} />
+          <Route path="student" element={<StudentStatus />} />
+          <Route path="faq" element={<FAQPage />} />
+          <Route path="information-full" element={<InformationFull />} />
+          <Route path="Shedule" element={<Schedule />} />
+          <Route path="Exam" element={<LichThi />} />
+          <Route path="about" element={<About />} />
         </Route>
-        
       </Routes>
     </BrowserRouter>
   )

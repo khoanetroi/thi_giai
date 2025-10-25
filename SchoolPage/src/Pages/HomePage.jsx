@@ -365,6 +365,27 @@ function HomePage() {
                     </div>
                 </div>
 
+                {/* Google Maps Section */}
+                <div className="col-span-1 md:col-span-12 rounded-2xl overflow-hidden shadow-lg">
+                    <div className="bg-slate-100 p-4 md:p-6">
+                        <h3 className="text-xl md:text-2xl font-bold text-slate-800 mb-2">
+                            Vị trí Học viện
+                        </h3>
+                        <p className="text-slate-600 mb-4">
+                            Ký túc xá Học viện Công nghệ Bưu chính Viễn thông - Cơ sở TP.HCM
+                        </p>
+                        <div className="relative w-full h-0 pb-[56.25%] md:pb-[40%]">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1773.0309756808529!2d106.78458129991043!3d10.847539017531282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317527130274c0e3%3A0xc13ad07d6399d49b!2zS8O9IHTDumMgeMOhIEjhu41jIHZp4buHbiBDw7RuZyBuZ2jhu4cgQsawdSBjaMOtbmggVmnhu4VuIHRow7RuZyBDxqEgc-G7nyB04bqhaSBUUC5IQ00!5e1!3m2!1sen!2s!4v1761379474697!5m2!1sen!2s" 
+                                className="absolute top-0 left-0 w-full h-full rounded-lg border-0"
+                                allowFullScreen="" 
+                                loading="lazy" 
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="PTIT HCM Campus Location"
+                            />
+                        </div>
+                    </div>
+                </div>
             </div>
        </>
     );
