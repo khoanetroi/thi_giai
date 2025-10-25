@@ -226,7 +226,7 @@ function HomePage() {
                 <div className="absolute inset-0 bg-linear-to-r from-white/10 to-white/100"></div>
 
                
-                <div className="w-full md:w-1/2 lg:w-2/5 p-6 z-10 space-y-4">
+                <div className="w-full md:w-1/2 lg:w-2/5 p-6 z-10 space-y-4 bg-white border border-red-600 md:bg-transparent md:border-none">
                     {/* TIÊU ĐỀ CHÍNH */}
                     <h2 className="text-3xl font-extrabold text-red-600 mb-4 border-b pb-2">
                         THÔNG TIN LIÊN HỆ
@@ -242,6 +242,22 @@ function HomePage() {
                         </p>
                         <p className="text-gray-700 ml-3">
                             <strong className="font-semibold">Cơ sở đào tạo:</strong> 97 Man Thiện, phường Tăng Nhơn Phú
+                        </p>
+                    </div>
+
+                     {/* MỤC 2: ĐỊA CHỈ */}
+                    <div className="space-y-1">
+                        <h3 className="text-lg font-bold text-[#051a53]">
+                            2. Thông tin liên hệ nhà trường
+                        </h3>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">Email liên hệ:</strong> hvbcvthcm@ptithcm.edu.vn
+                        </p>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">SĐT:</strong> (028) 38.295.258
+                        </p>
+                        <p className="text-gray-700 ml-3">
+                            <strong className="font-semibold">SĐT:</strong>  (028) 39.105.510
                         </p>
                     </div>
                 </div>
