@@ -6,7 +6,6 @@ const NavbarPTIT = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isDaoTaoOpen, setIsDaoTaoOpen] = useState(false);
 
-    // Close dropdown when clicking outside
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (!event.target.closest('#dropdownDaoTao') && !event.target.closest('#dropdownDaoTaoButton')) {
@@ -25,14 +24,12 @@ const NavbarPTIT = () => {
             <nav className="relative bg-white/90 backdrop-blur-lg border border-gray-100 rounded-lg md:rounded-full shadow-lg max-w-screen-xl mx-auto">
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 md:p-3">
 
-                    {/* Logo */}
                     <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse pl-1">
                         <img src={logo} className="h-8 md:h-10" alt="PTIT Logo" />
                     </Link>
 
-                    {/* Mobile buttons */}
                     <div className="flex items-center md:order-2 space-x-1 rtl:space-x-reverse pr-1 md:pr-2">
-                        <Link to="/shedule" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-md text-sm px-3 py-1.5 text-center transition-all duration-300 md:hidden transform hover:scale-105">
+                        <Link to="/Shedule" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-md text-sm px-3 py-1.5 text-center transition-all duration-300 md:hidden transform hover:scale-105">
                             Đăng Ký
                         </Link>
 
@@ -50,7 +47,6 @@ const NavbarPTIT = () => {
                         </button>
                     </div>
 
-                    {/* Navigation menu */}
                     <div
                         id="navbar-mega-menu"
                         className={`${isMenuOpen ? 'block' : 'hidden'} w-full md:block md:w-auto md:order-1`}
@@ -69,7 +65,6 @@ const NavbarPTIT = () => {
                                 </NavLink>
                             </li>
 
-                            {/* Đào tạo dropdown */}
                             <li className="relative">
                                 <button
                                     id="dropdownDaoTaoButton"
@@ -83,7 +78,6 @@ const NavbarPTIT = () => {
                                     </svg>
                                 </button>
 
-                                {/* Dropdown menu */}
                                 <div
                                     id="dropdownDaoTao"
                                     className={`${isDaoTaoOpen ? 'block' : 'hidden'} absolute z-10 font-normal bg-white/90 backdrop-blur-lg rounded-xl md:rounded-2xl shadow-lg w-auto md:w-[400px] mt-2 border border-gray-100`}
@@ -92,13 +86,13 @@ const NavbarPTIT = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 p-4 text-sm text-gray-700">
                                         <ul className="space-y-2" aria-labelledby="dropdownDaoTaoButton">
                                             <li>
-                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
+                                                <NavLink to="/Shedule" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Đại học chính quy</div>
                                                     <div className="text-xs text-gray-500">Chương trình đào tạo kỹ sư, cử nhân</div>
                                                 </NavLink>
                                             </li>
                                             <li>
-                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
+                                                <NavLink to="/Exam" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Sau Đại học</div>
                                                     <div className="text-xs text-gray-500">Các chương trình Thạc sĩ, Tiến sĩ</div>
                                                 </NavLink>
@@ -106,13 +100,13 @@ const NavbarPTIT = () => {
                                         </ul>
                                         <ul className="space-y-2 mt-2 md:mt-0" aria-labelledby="dropdownDaoTaoButton">
                                             <li>
-                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
+                                                <NavLink to="/information-full" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Liên thông</div>
                                                     <div className="text-xs text-gray-500">Liên thông từ Cao đẳng lên Đại học</div>
                                                 </NavLink>
                                             </li>
                                             <li>
-                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
+                                                <NavLink to="/faq" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Đào tạo từ xa</div>
                                                     <div className="text-xs text-gray-500">Học trực tuyến, lấy bằng chính quy</div>
                                                 </NavLink>
@@ -136,9 +130,9 @@ const NavbarPTIT = () => {
                         </ul>
                     </div>
 
-                    {/* Desktop apply button */}
+
                     <div className="hidden md:flex items-center md:order-2">
-                        <Link to="/#    " className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-full text-sm px-5 py-2.5 transition-all duration-300 transform hover:scale-105">
+                        <Link to="/Shedule" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-full text-sm px-5 py-2.5 transition-all duration-300 transform hover:scale-105">
                             Đăng Ký
                         </Link>
                     </div>
