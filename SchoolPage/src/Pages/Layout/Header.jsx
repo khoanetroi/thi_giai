@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logoptithcm.png" 
 
 const NavbarPTIT = () => {
@@ -25,15 +26,16 @@ const NavbarPTIT = () => {
                 <div className="flex flex-wrap items-center justify-between mx-auto p-2 md:p-3">
 
                     {/* Logo */}
-                    <a href="#" className="flex items-center space-x-2 rtl:space-x-reverse pl-1">
+                    <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse pl-1">
                         <img src={logo} className="h-8 md:h-10" alt="PTIT Logo" />
-                    </a>
+                    </Link>
 
                     {/* Mobile buttons */}
                     <div className="flex items-center md:order-2 space-x-1 rtl:space-x-reverse pr-1 md:pr-2">
-                        <a href="#" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-md text-sm px-3 py-1.5 text-center transition-all duration-300 md:hidden transform hover:scale-105">
-                            Xét tuyển
-                        </a>
+                        <Link to="/shedule" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-md text-sm px-3 py-1.5 text-center transition-all duration-300 md:hidden transform hover:scale-105">
+                            Đăng Ký
+                        </Link>
+
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             type="button"
@@ -56,15 +58,15 @@ const NavbarPTIT = () => {
                         <ul className="font-semibold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:items-center md:space-x-2 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
 
                             <li>
-                                <a href="#" className="block py-2 px-3 text-white bg-red-600 rounded-md md:rounded-full md:px-4 md:font-semibold" aria-current="page">
+                                <NavLink to="/" end className={({ isActive }) => `block py-2 px-3 rounded-md md:rounded-full md:px-4 md:font-semibold ${isActive ? 'text-white bg-red-600' : 'text-gray-700 hover:bg-gray-100 hover:text-red-500'}`}>
                                     Trang chủ
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-700 rounded-md hover:bg-gray-100 hover:text-red-500 md:rounded-full md:px-4 transition-colors duration-200">
-                                    Tuyển sinh
-                                </a>
+                                <NavLink to="/hoat-dong" className={({ isActive }) => `block py-2 px-3 rounded-md md:rounded-full md:px-4 transition-colors duration-200 ${isActive ? 'text-white bg-red-600' : 'text-gray-700 hover:bg-gray-100 hover:text-red-500'}`}>
+                                    Hoạt động
+                                </NavLink>
                             </li>
 
                             {/* Đào tạo dropdown */}
@@ -90,30 +92,30 @@ const NavbarPTIT = () => {
                                     <div className="grid grid-cols-1 md:grid-cols-2 p-4 text-sm text-gray-700">
                                         <ul className="space-y-2" aria-labelledby="dropdownDaoTaoButton">
                                             <li>
-                                                <a href="#" className="block p-2 rounded-lg hover:bg-red-50 transition-colors duration-200 hover:text-red-500">
+                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Đại học chính quy</div>
                                                     <div className="text-xs text-gray-500">Chương trình đào tạo kỹ sư, cử nhân</div>
-                                                </a>
+                                                </NavLink>
                                             </li>
                                             <li>
-                                                <a href="#" className="block p-2 rounded-lg hover:bg-red-50 transition-colors duration-200 hover:text-red-500">
+                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Sau Đại học</div>
                                                     <div className="text-xs text-gray-500">Các chương trình Thạc sĩ, Tiến sĩ</div>
-                                                </a>
+                                                </NavLink>
                                             </li>
                                         </ul>
                                         <ul className="space-y-2 mt-2 md:mt-0" aria-labelledby="dropdownDaoTaoButton">
                                             <li>
-                                                <a href="#" className="block p-2 rounded-lg hover:bg-red-50 transition-colors duration-200 hover:text-red-500">
+                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Liên thông</div>
                                                     <div className="text-xs text-gray-500">Liên thông từ Cao đẳng lên Đại học</div>
-                                                </a>
+                                                </NavLink>
                                             </li>
                                             <li>
-                                                <a href="#" className="block p-2 rounded-lg hover:bg-red-50 transition-colors duration-200 hover:text-red-500">
+                                                <NavLink to="/#" className={({ isActive }) => `block p-2 rounded-lg transition-colors duration-200 ${isActive ? 'bg-red-100 text-red-600' : 'hover:bg-red-50 hover:text-red-500'}`}>
                                                     <div className="font-semibold">Đào tạo từ xa</div>
                                                     <div className="text-xs text-gray-500">Học trực tuyến, lấy bằng chính quy</div>
-                                                </a>
+                                                </NavLink>
                                             </li>
                                         </ul>
                                     </div>
@@ -121,24 +123,24 @@ const NavbarPTIT = () => {
                             </li>
 
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-700 rounded-md hover:bg-gray-100 hover:text-red-500 md:rounded-full md:px-4 transition-colors duration-200">
+                                <NavLink to="/information-full" className={({ isActive }) => `block py-2 px-3 rounded-md md:rounded-full md:px-4 transition-colors duration-200 ${isActive ? 'text-white bg-red-600' : 'text-gray-700 hover:bg-gray-100 hover:text-red-500'}`}>
                                     Tin tức
-                                </a>
+                                </NavLink>
                             </li>
 
                             <li>
-                                <a href="#" className="block py-2 px-3 text-gray-700 rounded-md hover:bg-gray-100 hover:text-red-500 md:rounded-full md:px-4 transition-colors duration-200">
+                                <NavLink to="/faq" className={({ isActive }) => `block py-2 px-3 rounded-md md:rounded-full md:px-4 transition-colors duration-200 ${isActive ? 'text-white bg-red-600' : 'text-gray-700 hover:bg-gray-100 hover:text-red-500'}`}>
                                     Liên hệ
-                                </a>
+                                </NavLink>
                             </li>
                         </ul>
                     </div>
 
                     {/* Desktop apply button */}
                     <div className="hidden md:flex items-center md:order-2">
-                        <a href="#" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-full text-sm px-5 py-2.5 transition-all duration-300 transform hover:scale-105">
-                            Xét tuyển
-                        </a>
+                        <Link to="/shedule" className="text-white bg-red-600 hover:bg-red-700 font-medium rounded-full text-sm px-5 py-2.5 transition-all duration-300 transform hover:scale-105">
+                            Đăng Ký
+                        </Link>
                     </div>
 
                 </div>
