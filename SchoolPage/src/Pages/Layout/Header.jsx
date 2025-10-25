@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from "../../assets/logoptithcm.png" 
 
 const NavbarPTIT = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const NavbarPTIT = () => {
 
                     {/* Logo */}
                     <a href="#" className="flex items-center space-x-2 rtl:space-x-reverse pl-1">
-                        <img src="logoptithcm.png" className="h-8 md:h-10" alt="PTIT Logo" />
+                        <img src={logo} className="h-8 md:h-10" alt="PTIT Logo" />
                     </a>
 
                     {/* Mobile buttons */}

@@ -5,6 +5,7 @@ import slide2 from "../assets/HomePageAssets/slide2.jpg"
 import slide3 from "../assets/HomePageAssets/slide3.jpg"
 import slide4 from "../assets/HomePageAssets/slide4.jpg"
 import slide5 from "../assets/HomePageAssets/slide5.jpg"
+import logo from "../assets/HomePageAssets/logo.webp"
 import { initFlowbite } from 'flowbite';
 import { useEffect } from "react";
 
@@ -15,11 +16,12 @@ function HomePage() {
 
     return (
        <>
-            <div id="default-carousel" className="relative w-full mt-5" data-carousel="slide">
+            {/* Banner */}
+            <div id="default-carousel" className="relative w-full my-5" data-carousel="slide">
             {/* Carousel wrapper */}
             <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
                 {/* Item 1 */}
-                <div className=" duration-700 ease-in-out" data-carousel-item="">
+                <div className=" duration-500 ease-in-out" data-carousel-item="">
                 <img
                     src={slide1}
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -35,7 +37,7 @@ function HomePage() {
                 </div>
                 </div>
                 {/* Item 2 */}
-                <div className=" duration-700 ease-in-out" data-carousel-item="">
+                <div className=" duration-500 ease-in-out" data-carousel-item="">
                 <img
                     src={slide2}
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -43,15 +45,15 @@ function HomePage() {
                 />
                 <div class="absolute inset-0 bg-linear-to-r from-black/70 to-black/20"></div>
                 <div class="absolute inset-0 flex flex-col items-start justify-center text-left text-white p-4 sm:p-6 md:p-16 banner-caption transition-all duration-500 ease-out group-hover:-translate-y-2">
-                    <h2 class="text-xl sm:text-3xl md:text-5xl font-extrabold mb-2 sm:mb-4 uppercase">Tuyển Sinh 2025</h2>
-                    <p class="text-xs sm:text-sm md:text-lg mb-3 sm:mb-5 max-w-lg">Gia nhập cộng đồng PTIT-ers năng động và sáng tạo. Sẵn sàng chinh phục công nghệ.</p>
+                    <h2 class="text-xl sm:text-3xl md:text-5xl font-extrabold mb-2 sm:mb-4 uppercase">Tình hình học tập</h2>
+                    <p class="text-xs sm:text-sm md:text-lg mb-3 sm:mb-5 max-w-lg">Giúp phụ huynh nắm bắt tình hình học tập, rèn luyện của sinh viên. </p>
                     <a href="#" class="px-4 py-2 text-xs sm:text-sm font-medium text-white bg-transparent border border-white rounded-md md:rounded-full hover:bg-white hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
-                        Xem thông tin tuyển sinh
+                        Xem thông tin học tập và rèn luyện
                     </a>
                 </div>
                 </div>
                 {/* Item 3 */}
-                <div className=" duration-700 ease-in-out" data-carousel-item="">
+                <div className=" duration-500 ease-in-out" data-carousel-item="">
                 <img
                     src={slide3}
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -67,7 +69,7 @@ function HomePage() {
                 </div>
                 </div>
                 {/* Item 4 */}
-                <div className=" duration-700 ease-in-out" data-carousel-item="">
+                <div className=" duration-500 ease-in-out" data-carousel-item="">
                 <img
                     src={slide4}
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -83,7 +85,7 @@ function HomePage() {
                 </div>
                 </div>
                 {/* Item 5 */}
-                <div className=" duration-700 ease-in-out" data-carousel-item="">
+                <div className=" duration-500 ease-in-out" data-carousel-item="">
                 <img
                     src={slide5}
                     className="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
@@ -188,6 +190,34 @@ function HomePage() {
             </button>
             </div>
 
+            {/* Info về trường */}
+            <div className="container grid grid-cols-1 md:grid-cols-3 mx-auto mt-[50px] p-5 gap-2 ">
+                <div className="mx-auto my-auto hidden md:block md:col-span-1">
+
+                    <figure class="relative max-w-sm transition-all duration-500 cursor-pointer filter grayscale hover:grayscale-0">
+                        <a href="#">
+                            <img class="rounded-lg" src={logo} alt="image description"/>
+                        </a>
+                    </figure>
+
+
+                </div>
+
+                <div className="mx-auto col-span-1 md:col-span-2">            
+                    <div className="my-3 transition duration-300 transform hover:shadow-xl hover:-translate-y-1 p-5" >
+                        <h1 className="text-sm md:text-xl text-left font-bold text-red-500">Học viện công nghệ bưu chính viễn thông </h1>
+                        <h3 className="text-lg md:text-2xl text-left text-[#051a53] font-bold">Cơ sở Giáo dục Đại học trọng điểm Quốc gia về kỹ thuật, công nghệ</h3>
+                    </div>
+                    <p className="text-justify rounded-xl hover:bg-gray-300 p-2 duration-600">Học viện Công nghệ Bưu chính Viễn thông là 1 trong 7 trường Đại học đào tạo nguồn nhân lực An toàn thông tin trọng điểm Quốc gia từ năm 2013; 1 trong 5 trường đại học thuộc liên minh các cơ sở giáo dục đào tạo ngành Vi mạch bán dẫn từ năm 2023. Là đơn vị giáo dục duy nhất của Việt Nam nhận giải thưởng Công nghệ thông tin uy tín ASOCIO 2024 hạng mục Giáo dục số, được tổ chức SCImago bình chọn giữ vị trí số 1 về tiêu chí đổi mới sáng tạo trong bảng xếp hạng các cơ sở nghiên cứu khoa học tại Việt Nam. Trong lĩnh vực khoa học máy tính, Học viện cũng là Cơ sở giáo dục Đại học duy nhất tại Việt Nam được xếp hạng trong bảng xếp hạng về CS Ranking Châu Á. </p>
+                </div>
+                
+                
+            </div>
+
+            
+            <div className="">
+
+            </div>
 
        </>
     );
