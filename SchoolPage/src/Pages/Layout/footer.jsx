@@ -1,7 +1,5 @@
-﻿
 
 function Footer() {
-
     return (
         <footer className="bg-red-700/90 backdrop-blur-lg border-t border-white/20 text-white shadow-inner-top mt-16 overflow-hidden rounded-t-xl md:rounded-t-2xl mx-2">
             <div className="max-w-screen-xl mx-auto p-4 sm:p-6 md:py-12">
