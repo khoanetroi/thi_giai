@@ -1,5 +1,6 @@
+import React from 'react';
 
-function Footer() {
+const Footer = () => {
     return (
         <footer className="bg-red-700/90 backdrop-blur-lg border-t border-white/20 text-white shadow-inner-top mt-16 overflow-hidden rounded-t-xl md:rounded-t-2xl mx-2">
             <div className="max-w-screen-xl mx-auto p-4 sm:p-6 md:py-12">
@@ -7,7 +8,7 @@ function Footer() {
 
                     {/* Thông tin liên hệ */}
                     <div className="space-y-4 sm:col-span-2 md:col-span-2">
-                        <a hgitref="#" className="block transition-opacity duration-300 hover:opacity-80">
+                        <a href="#" className="block transition-opacity duration-300 hover:opacity-80">
               <span className="self-center text-lg sm:text-xl font-bold uppercase block max-w-[200px] sm:max-w-none">
                 Học viện Công nghệ Bưu chính Viễn thông
               </span>
